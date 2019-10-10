@@ -1,0 +1,83 @@
+https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
+
+$ git config --global user.name "YOUR NAME"
+$ git config --global user.email "YOUR EMAIL ADDRESS"
+
+--------------
+
+Vamos clonar!
+Então o que temos até agora é o git configurado para utilizar o github e o projeto no github criado. Precisamos trazer este projeto para o nosso git, e este processo se chama clonar. Então, quando você quiser começar um projeto utilizando git, você cria ele no github e clona na sua máquina. O comando para clonar o projeto é git clone "url", veja:
+git clone https://github.com/<username>/site.git
+
+----------------
+
+Comandos iniciais do git
+
+Com o repositório na sua máquina, vamos aprender 4 comandos iniciais que farão parte da sua vida a partir de agora:
+
+- git add <arquivos...> 
+Este comando adiciona o(s) arquivo(s) em um lugar que chamamos de INDEX, que funciona como uma área do git no qual os arquivos possam ser enviados ao Github. É importante saber que ADD não está adicionando um arquivo novo ao repositório, mas sim dizendo que o arquivo (sendo novo ou não) está sendo preparado para entrar na próxima revisão do repositório.
+- git commit -m "comentário qualquer" 
+Este comando realiza o que chamamos de “commit”, que significa pegar todos os arquivos que estão naquele lugar INDEX que o comando add adicionou e criar uma revisão com um número e um comentário, que será vista por todos.
+- git push
+ Push (empurrar) é usado para publicar todos os seus commits para o github. Neste momento, será pedido a sua senha.
+- git status
+ Exibe o status do seu repositório atual 
+
+ -------------------
+ 
+ Exercitando....
+ 
+ Preparar para commit:
+ 
+ git status
+ git add "arquivo"
+ git status
+ 
+Para commitar este arquivo, usamos:
+
+git commit -m "comentario" 
+ 
+Após “commitar” o arquivo, ele já está presente no nosso repositório local, tanto que realizamos o comando git status novamente e ele retornou que não havia nada de novo no projeto. Perceba agora que, mesmo recarregando o projeto no github, nada muda. Ou seja, estas mudanças até agora foram locais, você pode realizar várias operações antes de publicá-las no github. Para publicar, usamos o comando git push:
+
+git push
+
+--------------------
+
+Errei a mensagem do commit, como arrumo?
+
+Imagine que você tenha errado a mensagem que escreveu no commit ou simplesmente queira melhorar a descrição do seu trabalho. Você já comitou a mensagem mas ainda não fez o push das suas modificações para o servidor. Nesse caso você usa a flag --amend. Fica assim:
+
+$ git commit --amend
+
+O git commit --amend modifica a mensagem do commit mais recente, ou seja, o último commit feito por você no projeto. Além de você mudar a mensagem do commit, você consegue adicionar arquivos que você se esqueceu ou retirar arquivos comitados por engano. O git cria um commit totalmente novo e corrigido.
+
+------------------
+
+git pull
+
+Ainda existe um comando importante neste processo, que é o git pull. Ele é usado para trazer todas as modificações que estão no github para o seu projeto local. Isso é vital quando existem projetos mantidos por mais de uma pessoa, ou se você possui duas máquinas e precisa manter a sincronia entre elas. Supondo que você possui uma máquina no trabalho e outra em casa. Ambas tem o repositório local ligado ao github. Quando você executar um git push em uma das máquinas, terá que realizar um git pull na outra.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
