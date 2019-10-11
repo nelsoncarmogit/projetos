@@ -2,6 +2,8 @@ var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
 
+// nova configuração
+
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
     var form = new formidable.IncomingForm();
