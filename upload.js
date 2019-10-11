@@ -1,3 +1,5 @@
+var mongoose = require('mongoose');
+
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
