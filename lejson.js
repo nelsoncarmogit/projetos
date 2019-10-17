@@ -1,4 +1,4 @@
-//var http = require('http');
+/////var http = require('http');
 var fs = require('fs');
 var result = fs.readFileSync("C:/temp/EXA.json");
 var obj = JSON.parse(result);
