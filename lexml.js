@@ -1,7 +1,14 @@
 var http = require('http');
 var fs = require('fs');
-var xmlparser = require('express-xml-bodyparser');
+//var xmlparser = require('express-xml-bodyparser');
 
+
+var result = fs.readFileSync("C:/temp/EXA.json");
+var obj = JSON.parse(result);
+var keys = Object.keys(obj);
+for (var i = 0; i < keys.length; i++) {
+  console.log(obj[keys[i]]);
+}
 
 /*
 http.createServer(function (req, res) {
@@ -21,7 +28,7 @@ http.createServer(function (req, res) {
 }).listen(3000);
 
 */
-
+/*
 
 var http = require('http');
 var fs = require('fs');
@@ -32,3 +39,4 @@ http.createServer(function (req, res) {
     res.end();
   });
 }).listen(3000);
+*/
